@@ -25,7 +25,7 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 # 3种上网方式
 板载wifi以AP模式发射5Ghz信号供需要上网的设备连接，USB口插入的设备作为Wan
 1. USB口插入USB有线网卡，实现有线接入，实测上网速度约100Mbps
-2. USB口插入华为E8732，实现4G上网，实测上网速度约20~40Mbps。若使用openmptcprouter聚合两路USB口的4G网卡，则可以达到100Mbps的上网速度
+2. USB口插入华为E8732，实现4G上网，实测上网速度约20~40Mbps。若使用openmptcprouter聚合两路USB口的4G网卡，则可以达到接近100Mbps的上网速度
 3. USB口插入RTL8812BU，实现5Ghz无线中继，实测上网速度约100Mbps
 
 # 编译固件
