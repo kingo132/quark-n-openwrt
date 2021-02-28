@@ -221,7 +221,9 @@ arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
 
 # 驱动GPIO按钮
-参考文档：https://openwrt.org/docs/guide-user/hardware/hardware.button
+参考文档：
+* https://openwrt.org/docs/guide-user/hardware/hardware.button
+* https://openwrt-nctu.gitbook.io/project/experiment-io/exp-gpio
 ```
 # 测试命令
 cat /sys/kernel/debug/gpio
@@ -245,6 +247,14 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
 
 # 驱动MPU6050传感器
 TODO
+```
+# 测试命令
+i2cdetect -l
+i2cdetect -y 0
+i2cdetect -y 1
+i2cdetect -y 2
+i2cdetect -y 3
+```
 
 # 有用的连接
 * https://gitee.com/coolflyreg163/quark-n
