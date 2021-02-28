@@ -221,7 +221,7 @@ arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
 
 # 驱动GPIO按钮
-TODO
+参考文档：https://openwrt.org/docs/guide-user/hardware/hardware.button
 ```
 # 测试命令
 
