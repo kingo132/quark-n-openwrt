@@ -224,6 +224,8 @@ arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 * https://openwrt.org/docs/guide-user/hardware/hardware.button
 * https://openwrt-nctu.gitbook.io/project/experiment-io/exp-gpio
 ```
+# 安装工具
+opkg install gpiod-tools
 # 测试命令
 cat /sys/kernel/debug/gpio
 /sys/class/gpio # echo 6 > export
