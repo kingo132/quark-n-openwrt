@@ -250,6 +250,8 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
 # 测试命令，传感器位于0号总线0x68地址
 i2cdetect -l
 i2cdetect -y 0
+# 使用官方提供的测试脚本测试
+python mpu6050.py
 ```
 
 # 有用的连接
