@@ -27,9 +27,9 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 3. USB口插入RTL8812BU，实现5Ghz无线中继，实测上网速度约100Mbps
 
 # 准备驱动
-RTL8811CU驱动地址: https://github.com/fastoe/RTL8811CU.git
+RTL8811CU
 
-RTL8812BU驱动地址: https://github.com/fastoe/RTL8812BU.git
+RTL8812BU
 
 # 编译固件
 参考网址：https://wiki.friendlyarm.com/wiki/index.php/How_to_Build_FriendlyWrt/zh
@@ -135,4 +135,24 @@ kmod-usb2
 kmod-usb-net-cdc-ether
 进入utilites，选
 usb-modeswitch
+```
+
+# 驱动更换以后的板载RTL8811CU无线网卡
+驱动地址: https://github.com/fastoe/RTL8811CU.git
+1. 编译驱动文件8821cu.ko 
+2. 执行以下命令
+```
+cp 8821cu.ko  /lib/modules/4.14.111/
+echo 8821cu > /etc/modules.d/90-8821cu
+ln -s /etc/modules.d/90-8821cu /etc/modules-boot.d/90-8821cu
+```
+
+# 驱动USB的RTL8812BU无线网卡
+驱动地址: https://github.com/fastoe/RTL8812BU.git
+1. 编译驱动文件
+2. 执行以下命令
+```
+cp 88x2bu.ko /lib/modules/4.14.111/
+echo 88x2bu > /etc/modules.d/90-88x2bu
+ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/9088x2bu
 ```
