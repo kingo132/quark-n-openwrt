@@ -224,7 +224,23 @@ arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 参考文档：https://openwrt.org/docs/guide-user/hardware/hardware.button
 ```
 # 测试命令
+cat /sys/kernel/debug/gpio
+```
+ubuntu下的信息
+```
+root@Quark-N:/home/pi/WorkSpace/GPIO# cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 0-223, parent: platform/1c20800.pinctrl, 1c20800.pinctrl:
+ gpio-0   (                    |fb_st7789vw         ) out hi    
+ gpio-1   (                    |fb_st7789vw         ) out hi    
+ gpio-10  (                    |status_led          ) out lo    
+ gpio-204 (                    |usb0_id_det         ) in  lo IRQ
 
+gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
+ gpio-354 (                    |usb0-vbus           ) out hi    
+ gpio-358 (                    |?                   ) out lo    
+ gpio-360 (                    |vcc1v2              ) out hi    
+ gpio-361 (                    |vcc-dram            ) out hi    
+ gpio-362 (                    |LED2                ) out hi 
 ```
 
 # 驱动MPU6050传感器
