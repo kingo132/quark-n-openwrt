@@ -146,7 +146,7 @@ ln -s /etc/modules.d/90-8821cu /etc/modules-boot.d/90-8821cu
 
 # 驱动USB的RTL8812BU无线网卡
 驱动地址: https://github.com/fastoe/RTL8812BU.git
-1. 编译驱动文件
+1. 编译驱动文件88x2bu.ko
 2. 执行以下命令
 ```
 cp 88x2bu.ko /lib/modules/4.14.111/
