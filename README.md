@@ -1,6 +1,8 @@
 # 概述
 在稚晖君的夸克(quark)迷你小电脑Atom-N上安装Openwrt
 
+官方文档地址：https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
+
 # 硬件配置
 ```
 CPU: Allwinner H3, 四核Cortex-A7 @ 1GHz
@@ -227,3 +229,6 @@ TODO
 
 # 驱动MPU6050传感器
 TODO
+
+# 有用的连接
+* https://gitee.com/coolflyreg163/quark-n
