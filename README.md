@@ -261,10 +261,10 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
  gpio-361 (                    |vcc-dram            ) out hi    
  gpio-362 (                    |LED2                ) out hi   
 ```
-以reset按键为左下，则分别的位置为
-* 左上：GPIO("/dev/gpiochip1", 4, "in")
-* 右上：
-* 右下：GPIO("/dev/gpiochip1", 3, "in")
+GPIO地址
+* Recovery: GPIO("/dev/gpiochip1", 4, "in")
+* Uboot:
+* GPIO-KEY: GPIO("/dev/gpiochip1", 3, "in")
 
 # 驱动MPU6050传感器
 需要将官方ubuntu固件中的boot分区下的sun8i-h3-atom_n.dtb拷贝到openwrt固件的boot目录下面，并且修改boot.cmd加载这个dtb。否则传感器无法使用，会出现i2c locked错误。
