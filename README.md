@@ -245,8 +245,7 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
  gpio-362 (                    |LED2                ) out hi 
 ```
 
-# 驱动MPU6050传感器
-TODO
+# 驱动MPU6050传感器(TODO)
 ```
 # 测试命令
 i2cdetect -l
@@ -255,6 +254,22 @@ i2cdetect -y 1
 i2cdetect -y 2
 i2cdetect -y 3
 ```
+执行官方固件中的测试程序mpu6050.py，出现以下错误
+```
+root@FriendlyWrt:~# python mpu6050.py 
+Traceback (most recent call last):
+  File "mpu6050.py", line 231, in <module>
+    mpu = mpu6050(0x68)
+  File "mpu6050.py", line 54, in __init__
+    self.bus.write_byte_data(self.address, self.PWR_MGMT_1, 0x00)
+IOError: [Errno 110] Operation timed out
+```
+同时dmesg中出现了i2c被锁定的日志
+```
+i2c i2c-0: mv64xxx: I2C bus locked, block: 1, time_left: 0
+```
+此时继续执行i2cdetect会出现很多这种locked日志，并且扫描很慢。
+暂时还不知道怎么解决。
 
 # 有用的连接
 * https://gitee.com/coolflyreg163/quark-n
