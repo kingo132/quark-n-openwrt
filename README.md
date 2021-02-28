@@ -247,12 +247,9 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
 # 驱动MPU6050传感器
 需要将官方ubuntu固件中的boot分区下的sun8i-h3-atom_n.dtb拷贝到openwrt固件的boot目录下面，并且修改boot.cmd加载这个dtb。否则传感器无法使用，会出现i2c locked错误。
 ```
-# 测试命令
+# 测试命令，传感器位于0号总线0x68地址
 i2cdetect -l
 i2cdetect -y 0
-i2cdetect -y 1
-i2cdetect -y 2
-i2cdetect -y 3
 ```
 
 # 有用的连接
