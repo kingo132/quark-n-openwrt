@@ -266,6 +266,8 @@ GPIO地址
 * Uboot:
 * GPIO-KEY: GPIO("/dev/gpiochip1", 3, "in")
 
+TODO: 安装gpiod
+
 # 驱动MPU6050传感器
 需要将官方ubuntu固件中的boot分区下的sun8i-h3-atom_n.dtb拷贝到openwrt固件的boot目录下面，并且修改boot.cmd加载这个dtb。否则传感器无法使用，会出现i2c locked错误。
 ```
