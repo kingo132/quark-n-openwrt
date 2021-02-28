@@ -135,6 +135,8 @@ kmod-usb2
 kmod-usb-net-cdc-ether
 进入utilites，选
 usb-modeswitch
+TODO: fbtft-devices
+TODO: kmod-sound-core
 ```
 
 # 驱动更换以后的板载RTL8811CU无线网卡
@@ -155,4 +157,68 @@ ln -s /etc/modules.d/90-8821cu /etc/modules-boot.d/90-8821cu
 cp 88x2bu.ko /lib/modules/4.14.111/
 echo 88x2bu > /etc/modules.d/90-88x2bu
 ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/9088x2bu
+```
+
+# 驱动TFT显示屏
+固件内核的fbtft_device.c中加入以下设备信息
+```
+                .name = "ips_114inch_240_135",
+                .spi = &(struct spi_board_info) {
+                        .modalias = "fb_st7789vw",
+                        .max_speed_hz = 50000000,
+                        .mode = SPI_MODE_3,
+                        .platform_data = &(struct fbtft_platform_data) {
+                                .display = {
+                                        .buswidth = 8,
+                                },
+                                .gpios = (const struct fbtft_gpio[]) {
+                                        {"reset", 1},
+                                        {"dc",    0},
+                                        {},
+                                },
+                        }
+                }
+```
+执行以下命令
+```
+echo 'fbtft_device custom name=ips_114inch_240_135 busnum=0 mode=3 speed=50000000 width=240 height=135 gpios=dc:0,reset:1' > /etc/modules.d/61-fbtft-device
+ln -s /etc/modules.d/61-fbtft-device /etc/modules-boot.d/61-fbtft-device
+# 测试屏幕输出
+cat /dev/urandom > /dev/fb1
+```
+然后就可以自己写程序操作/dev/fb1画图了
+
+部分网上的framebuffer测试代码
+* https://github.com/wangzhaodong123/Framebuffer-test.git
+* https://github.com/usbguru/Clear-Frame-Buffer.git
+* https://github.com/fantasiajo/clock_fb.git
+* https://github.com/toradex/fb-draw.git
+* https://github.com/kurt-vd/ppmtofb.git
+
+# 驱动板载喇叭
+Openwrt固件默认所有音频设备都是静音状态，需要使用alsamixer，然后按M键全部关闭静音
+```
+# 安装必要工具
+opkg install alsa-utils mpg123 madplayer
+# 修改配置文件
+echo 'pcm.!default {
+    type hw
+    card 2
+}
+
+ctl.!default {
+    type hw           
+    card 2
+}' > ~/.asoundrc
+# 测试喇叭
+aplay --device="hw:2,0" sap.wav
+mpg123 aplacenearby.mp3
+madplayer aplacenearby.mp3
+```
+
+# 驱动板载麦克风
+TODO
+```
+# 测试录音
+arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
