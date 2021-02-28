@@ -176,7 +176,7 @@ ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/9088x2bu
 ```
 执行以下命令
 ```
-echo 'fbtft_device custom name=ips_114inch_240_135 busnum=0 mode=3 speed=50000000 width=240 height=135 gpios=dc:0,reset:1' > /etc/modules.d/61-fbtft-device
+echo 'fbtft_device custom name=ips_114inch_240_135 busnum=0 mode=3 speed=50000000 width=190 height=280 gpios=dc:0,reset:1' > /etc/modules.d/61-fbtft-device
 ln -s /etc/modules.d/61-fbtft-device /etc/modules-boot.d/61-fbtft-device
 # 测试屏幕输出
 cat /dev/urandom > /dev/fb1
