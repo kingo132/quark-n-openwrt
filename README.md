@@ -26,11 +26,6 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 2. USB口插入华为E8732，实现4G上网，实测上网速度约20~40Mbps
 3. USB口插入RTL8812BU，实现5Ghz无线中继，实测上网速度约100Mbps
 
-# 准备驱动
-RTL8811CU
-
-RTL8812BU
-
 # 编译固件
 参考网址：https://wiki.friendlyarm.com/wiki/index.php/How_to_Build_FriendlyWrt/zh
 
@@ -222,3 +217,13 @@ TODO
 # 测试录音
 arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
+
+# 驱动GPIO按钮
+TODO
+```
+# 测试命令
+
+```
+
+# 驱动MPU6050传感器
+TODO
