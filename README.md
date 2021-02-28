@@ -213,14 +213,13 @@ mpg123 aplacenearby.mp3
 madplayer aplacenearby.mp3
 ```
 
-# 驱动板载麦克风
-TODO
+# 驱动板载麦克风(TODO)
 ```
 # 测试录音
 arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
 
-# 驱动GPIO按钮
+# 驱动GPIO按钮(TODO)
 参考文档：
 * https://openwrt.org/docs/guide-user/hardware/hardware.button
 * https://openwrt-nctu.gitbook.io/project/experiment-io/exp-gpio
