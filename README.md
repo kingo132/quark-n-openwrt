@@ -243,6 +243,22 @@ gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
  gpio-361 (                    |vcc-dram            ) out hi    
  gpio-362 (                    |LED2                ) out hi 
 ```
+openwrt下的信息
+```
+root@FriendlyWrt:~# cat /sys/kernel/debug/gpio
+gpiochip0: GPIOs 0-223, parent: platform/1c20800.pinctrl, 1c20800.pinctrl:
+ gpio-0   (                    |fb_st7789vw         ) out hi    
+ gpio-1   (                    |fb_st7789vw         ) out hi    
+ gpio-10  (                    |status_led          ) out lo    
+ gpio-204 (                    |usb0_id_det         ) in  lo IRQ
+
+gpiochip1: GPIOs 352-383, parent: platform/1f02c00.pinctrl, 1f02c00.pinctrl:
+ gpio-354 (                    |usb0-vbus           ) out lo    
+ gpio-358 (                    |?                   ) out lo    
+ gpio-360 (                    |vcc1v2              ) out hi    
+ gpio-361 (                    |vcc-dram            ) out hi    
+ gpio-362 (                    |LED2                ) out hi   
+```
 
 # 驱动MPU6050传感器
 需要将官方ubuntu固件中的boot分区下的sun8i-h3-atom_n.dtb拷贝到openwrt固件的boot目录下面，并且修改boot.cmd加载这个dtb。否则传感器无法使用，会出现i2c locked错误。
