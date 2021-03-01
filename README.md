@@ -204,6 +204,9 @@ cat /dev/urandom > /dev/fb1
 * https://github.com/toradex/fb-draw.git
 * https://github.com/kurt-vd/ppmtofb.git
 
+支持fbterm（尚未测试）
+* https://blog.csdn.net/XINGHUO456/article/details/55045096
+
 # 驱动板载喇叭
 Openwrt固件默认所有音频设备都是静音状态，需要使用alsamixer，然后按M键全部关闭静音
 ```
