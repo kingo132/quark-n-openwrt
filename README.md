@@ -616,6 +616,14 @@ RTL8821CU芯片购买地址：https://item.taobao.com/item.htm?spm=a1z09.2.0.0.7
 # TODO: 功能待测试
 ```
 
+# 其他问题
+## openwrt默认不会开启cron
+如需要通过crontab定时执行程序，则需开启cron
+```
+/etc/init.d/cron start
+/etc/init.d/cron enable
+```
+
 # 有用的连接
 * https://gitee.com/coolflyreg163/quark-n
 * https://www.kancloud.cn/lichee/lpi0/317714
