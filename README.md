@@ -532,6 +532,12 @@ gpiochip1 - 32 lines:
 	line  30:      unnamed       unused   input  active-high 
 	line  31:      unnamed       unused   input  active-high 
 ```
+编程参考网址
+* https://www.ics.com/blog/gpio-programming-exploring-libgpiod-library
+* https://upsangel.com/dd-wrt/router-button-customize-function/
+* https://openwrt.org/docs/guide-user/hardware/hardware.button
+* https://wiki.loliot.net/docs/lang/python/libraries/gpiod/python-gpiod-about/
+* https://gitee.com/coolflyreg163/quark-n/blob/master/gpio_key_led.py
 
 # 驱动MPU6050传感器
 需要将官方ubuntu固件中的boot分区下的sun8i-h3-atom_n.dtb拷贝到openwrt固件的boot目录下面，并且修改boot.cmd加载这个dtb。否则传感器无法使用，会出现i2c locked错误。
