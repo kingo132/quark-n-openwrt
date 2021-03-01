@@ -597,5 +597,13 @@ i2cdetect -y 0
 python mpu6050.py
 ```
 
+# 蓝牙驱动
+RTL8811CU芯片没有蓝牙功能，如果需要蓝牙功能，则需要更换RTL8821CU芯片。
+
+RTL8821CU芯片购买地址：https://item.taobao.com/item.htm?spm=a1z09.2.0.0.718b2e8d2qLRj3&id=593833915879&_u=110vbvjcd7ab
+```
+# TODO: 功能待测试
+```
+
 # 有用的连接
 * https://gitee.com/coolflyreg163/quark-n
