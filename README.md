@@ -216,6 +216,7 @@ madplayer aplacenearby.mp3
 # 驱动板载麦克风(TODO)
 ```
 # 测试录音
+arecord -f S16_LE --device="hw:2,0" test.wav
 arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
 
