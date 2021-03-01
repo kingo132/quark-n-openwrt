@@ -614,3 +614,4 @@ RTL8821CU芯片购买地址：https://item.taobao.com/item.htm?spm=a1z09.2.0.0.7
 
 # 有用的连接
 * https://gitee.com/coolflyreg163/quark-n
+* https://www.kancloud.cn/lichee/lpi0/317714
