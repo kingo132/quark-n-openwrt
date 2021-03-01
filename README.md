@@ -3,6 +3,10 @@
 
 官方文档地址：https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
 
+纯净版固件下载地址：链接: https://pan.baidu.com/s/1PwUx4Xo7jMfx7gQpRXYv7A 提取码: 88qi
+
+纯净版固件没有添加我的任何配置和驱动，需要按照下面文档自行添加。
+
 # 硬件配置
 ```
 CPU: Allwinner H3, 四核Cortex-A7 @ 1GHz
