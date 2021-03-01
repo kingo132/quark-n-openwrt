@@ -219,17 +219,19 @@ madplayer aplacenearby.mp3
 arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 ```
 
-# 驱动GPIO按钮(TODO)
+# 驱动GPIO按钮
 参考文档：
 * https://openwrt.org/docs/guide-user/hardware/hardware.button
 * https://openwrt-nctu.gitbook.io/project/experiment-io/exp-gpio
 ```
 # 安装工具
-opkg install gpiod-tools
+opkg install gpiod-tools gpioctl-sysfs
 # 测试命令
 cat /sys/kernel/debug/gpio
-/sys/class/gpio # echo 6 > export
-/sys/class/gpio # echo 6 > unexport
+#/sys/class/gpio # echo 6 > export
+#/sys/class/gpio # echo 6 > unexport
+gpioget gpiochip1 3 # 测试GPIO-KEY
+gpioget gpiochip1 4 # 测试Recovery
 ```
 ubuntu下的信息
 ```
