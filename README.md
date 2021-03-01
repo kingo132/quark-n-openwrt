@@ -213,7 +213,7 @@ mpg123 aplacenearby.mp3
 madplayer aplacenearby.mp3
 ```
 
-# 驱动板载麦克风(TODO)
+# 驱动板载麦克风
 ```
 root@FriendlyWrt:~# arecord -l
 **** List of CAPTURE Hardware Devices ****
@@ -252,8 +252,13 @@ card 2: Codec [H3 Audio Codec], device 0: CDC PCM Codec-0 []
   Subdevice #0: subdevice #0
   
 # 测试录音
-arecord -f S16_LE --device="hw:2,0" test.wav
-arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
+root@FriendlyWrt:~# arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
+Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
+arecord: pcm_read:2149: read error: I/O error
+root@FriendlyWrt:~# arecord -f S16_LE --device="hw:2,0" test.wav
+Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 8000 Hz, Mono
+arecord: pcm_read:2149: read error: I/O error
+# 总是报错，目前还不知道怎么解决
 ```
 
 # 驱动GPIO按钮
