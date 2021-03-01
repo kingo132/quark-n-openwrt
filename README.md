@@ -21,6 +21,7 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 
 # 更换板载wifi
 板载wifi是RTL8723BU，实测无线上网速度在20~30Mbps左右，更换相同封装的RTL8811CU双频芯片(0bda:c811)，可以获得100Mbps的无线上网速度
+
 RTL8811CU芯片淘宝购买链接
 * https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=593661894791&_u=110vbvjc7fd7
 * https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=577458840138&_u=110vbvjc7768
