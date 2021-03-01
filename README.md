@@ -165,7 +165,7 @@ ln -s /etc/modules.d/90-8821cu /etc/modules-boot.d/90-8821cu
 ```
 cp 88x2bu.ko /lib/modules/4.14.111/
 echo 88x2bu > /etc/modules.d/90-88x2bu
-ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/9088x2bu
+ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/90-88x2bu
 ```
 
 # 驱动TFT显示屏
