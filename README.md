@@ -214,6 +214,7 @@ madplayer aplacenearby.mp3
 ```
 
 # 驱动板载麦克风
+默认麦克风处于关闭状态，需要执行alsamixer，按F6选择H3声卡，按TAB选择Capture，按左右选择Mic，然后按空格，会出现L R标记，表示麦克风已打开。否则会出现I/O error无法录音。参考网址：https://forum.armbian.com/topic/4714-how-do-i-make-arecord-work-in-mainline-opi-zero/
 ```
 root@FriendlyWrt:~# arecord -l
 **** List of CAPTURE Hardware Devices ****
@@ -254,11 +255,8 @@ card 2: Codec [H3 Audio Codec], device 0: CDC PCM Codec-0 []
 # 测试录音
 root@FriendlyWrt:~# arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
 Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 16000 Hz, Mono
-arecord: pcm_read:2149: read error: I/O error
 root@FriendlyWrt:~# arecord -f S16_LE --device="hw:2,0" test.wav
 Recording WAVE 'test.wav' : Signed 16 bit Little Endian, Rate 8000 Hz, Mono
-arecord: pcm_read:2149: read error: I/O error
-# 总是报错，目前还不知道怎么解决
 ```
 
 # 驱动GPIO按钮
