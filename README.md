@@ -21,12 +21,19 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 
 # 更换板载wifi
 板载wifi是RTL8723BU，实测无线上网速度在20~30Mbps左右，更换相同封装的RTL8811CU双频芯片(0bda:c811)，可以获得100Mbps的无线上网速度
+RTL8811CU芯片淘宝购买链接
+* https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=593661894791&_u=110vbvjc7fd7
+* https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=577458840138&_u=110vbvjc7768
 
 # 3种上网方式
 板载wifi以AP模式发射5Ghz信号供需要上网的设备连接，USB口插入的设备作为Wan
 1. USB口插入USB有线网卡，实现有线接入，实测上网速度约100Mbps
 2. USB口插入华为E8732，实现4G上网，实测上网速度约20~40Mbps。若使用openmptcprouter聚合两路USB口的4G网卡，则可以达到接近100Mbps的上网速度
 3. USB口插入RTL8812BU，实现5Ghz无线中继，实测上网速度约100Mbps
+
+RTL8812BU无线网卡淘宝购买链接
+* https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=610412175557&_u=110vbvjc07cd
+* https://item.taobao.com/item.htm?spm=a1z09.2.0.0.4e022e8dSeTfXB&id=638270677443&_u=110vbvjc1ab1
 
 # 编译固件
 参考网址：https://wiki.friendlyarm.com/wiki/index.php/How_to_Build_FriendlyWrt/zh
