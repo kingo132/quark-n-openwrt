@@ -209,6 +209,7 @@ cat /dev/urandom > /dev/fb1
 
 有用的链接
 * http://h-wrt.com/en/doc/video
+* https://widora.io/ips
 
 # 驱动板载喇叭
 Openwrt固件默认所有音频设备都是静音状态，需要使用alsamixer，然后按M键全部关闭静音
