@@ -207,6 +207,9 @@ cat /dev/urandom > /dev/fb1
 支持fbterm（尚未测试）
 * https://blog.csdn.net/XINGHUO456/article/details/55045096
 
+有用的链接
+* http://h-wrt.com/en/doc/video
+
 # 驱动板载喇叭
 Openwrt固件默认所有音频设备都是静音状态，需要使用alsamixer，然后按M键全部关闭静音
 ```
