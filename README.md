@@ -215,6 +215,42 @@ madplayer aplacenearby.mp3
 
 # 驱动板载麦克风(TODO)
 ```
+root@FriendlyWrt:~# arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 0: Dummy [Dummy], device 0: Dummy PCM [Dummy PCM]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: Loopback [Loopback], device 0: Loopback PCM [Loopback PCM]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 1: Loopback [Loopback], device 1: Loopback PCM [Loopback PCM]
+  Subdevices: 8/8
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+  Subdevice #3: subdevice #3
+  Subdevice #4: subdevice #4
+  Subdevice #5: subdevice #5
+  Subdevice #6: subdevice #6
+  Subdevice #7: subdevice #7
+card 2: Codec [H3 Audio Codec], device 0: CDC PCM Codec-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+  
 # 测试录音
 arecord -f S16_LE --device="hw:2,0" test.wav
 arecord -f S16_LE -d 10 -r 16000 --device="hw:2,0" test.wav
