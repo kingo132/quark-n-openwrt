@@ -190,7 +190,7 @@ ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/90-88x2bu
                         }
                 }
 ```
-然后执行以下命令
+编译固件以后，执行以下命令
 ```
 echo 'fbtft_device name=ips_114inch_240_135 rotate=270' > /etc/modules.d/08-fbtft-device
 ln -s /etc/modules.d/08-fbtft-device /etc/modules-boot.d/08-fbtft-device
