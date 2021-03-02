@@ -169,7 +169,8 @@ ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/90-88x2bu
 ```
 
 # 驱动TFT显示屏
-固件内核的fbtft_device.c中加入以下设备信息
+两种方式：
+第一种：固件内核的fbtft_device.c中加入以下设备信息
 ```
                 .name = "ips_114inch_240_135",
                 .spi = &(struct spi_board_info) {
@@ -188,7 +189,12 @@ ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/90-88x2bu
                         }
                 }
 ```
-执行以下命令
+然后执行以下命令
+```
+echo 'fbtft_device name=ips_114inch_240_135 rotate=270' > /etc/modules.d/08-fbtft-device
+ln -s /etc/modules.d/08-fbtft-device /etc/modules-boot.d/08-fbtft-device
+```
+第二种：直接执行以下命令
 ```
 echo 'fbtft_device custom name=ips_114inch_240_135 busnum=0 mode=3 speed=50000000 width=190 height=280 gpios=dc:0,reset:1 rotate=270' > /etc/modules.d/08-fbtft-device
 ln -s /etc/modules.d/08-fbtft-device /etc/modules-boot.d/08-fbtft-device
