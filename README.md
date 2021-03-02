@@ -170,6 +170,7 @@ ln -s /etc/modules.d/90-88x2bu /etc/modules-boot.d/90-88x2bu
 
 # 驱动TFT显示屏
 两种方式：
+
 第一种：固件内核的fbtft_device.c中加入以下设备信息
 ```
                 .name = "ips_114inch_240_135",
