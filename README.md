@@ -21,6 +21,7 @@ Wifi: RTL8723BU IEEE 802.11 b/g/n @2.4GHz
 板载外设: 麦克风, MPU6050运动传感器(陀螺仪 + 加速度计), 按钮 (GPIO-KEY, Uboot, Recovery, Reset)
 显示屏: ST7789vw驱动1.14寸，分辨率135x240
 外部存储: Micro SD卡插槽
+喇叭功放：LM4871
 ```
 
 # 更换板载wifi
