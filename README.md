@@ -238,6 +238,13 @@ aplay --device="hw:2,0" sap.wav
 mpg123 aplacenearby.mp3
 madplayer aplacenearby.mp3
 ```
+注意alsamixer设置不会自动保存，需要执行以下命令
+```
+mkdir ~/.config
+alsactl --file ~/.config/asound.state store
+# 同时将以下命令加入rc.local开机恢复配置
+alsactl --file ~/.config/asound.state restore
+```
 
 # 驱动板载麦克风
 默认麦克风处于关闭状态，需要执行alsamixer，按F6选择H3声卡，按TAB选择Capture，按左右选择Mic，然后按空格，会出现L R标记，表示麦克风已打开。否则会出现I/O error无法录音。参考网址：https://forum.armbian.com/topic/4714-how-do-i-make-arecord-work-in-mainline-opi-zero/
