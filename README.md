@@ -1,6 +1,8 @@
 # 概述
 在稚晖君的夸克(quark)迷你小电脑Atom-N上安装Openwrt
 
+稚晖君quark小电脑项目地址：https://github.com/peng-zhihui/Project-Quantum
+
 官方文档地址：https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
 
 纯净版固件下载地址：链接: https://pan.baidu.com/s/1PwUx4Xo7jMfx7gQpRXYv7A 提取码: 88qi
