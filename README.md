@@ -6,8 +6,8 @@
 官方文档地址：https://wiki.seeedstudio.com/cn/Quantum-Mini-Linux-Development-Kit/
 
 纯净版固件下载地址：
-百毒网盘: https://pan.baidu.com/s/1PwUx4Xo7jMfx7gQpRXYv7A 提取码: 88qi
-狗哥硬盘：https://drive.google.com/file/d/1VpMPoZBd1CTCEauSvclEKeQTPj9Nv3Ge/view?usp=sharing
+* 百毒网盘: https://pan.baidu.com/s/1PwUx4Xo7jMfx7gQpRXYv7A 提取码: 88qi
+* 狗哥硬盘：https://drive.google.com/file/d/1VpMPoZBd1CTCEauSvclEKeQTPj9Nv3Ge/view?usp=sharing
 
 纯净版固件没有添加我的任何配置和驱动，需要按照下面文档自行添加。
 
